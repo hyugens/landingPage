@@ -1,1 +1,46 @@
-<p>formulario works!</p>
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true" *ngIf="mostrar">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Cuenta con Nosotros</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" [ngStyle]="{'min-height': '390px'}">
+                    <!-- <button mat-button>Click me!</button> -->
+                <!-- aqui va el formulario -->
+                <div class="example-container" [formGroup]="profileForm">
+                    <mat-form-field class="formulario">
+                        <input type="text" required matInput placeholder="Nombre" formControlName="nombre">
+                    </mat-form-field>
+                    <mat-form-field class="formulario">
+                        <input type="text" matInput placeholder="Apellido" formControlName="apellido">
+                    </mat-form-field>
+                    <mat-form-field class="formulario">
+                        <input required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" type="email" matInput placeholder="Correo electrónico" formControlName="correo">
+                    </mat-form-field>
+                    <mat-form-field class="formulario">
+                        <input type="text" required matInput placeholder="País" formControlName="pais">
+                    </mat-form-field>
+                    <mat-form-field class="formulario">
+                        <input required type="number" matInput placeholder="Edad" formControlName="edad">
+                    </mat-form-field>
+
+                    <mat-form-field class="formulario">
+                        <input required matInput placeholder="Curso de Interes" formControlName="curso_interes">                              
+                    </mat-form-field>
+                </div>
+                      
+                      
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="datos()">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>

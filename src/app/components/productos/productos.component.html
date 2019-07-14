@@ -1,52 +1,20 @@
 <div class="container">
-    <h2 class="mb-5" style="text-align: center">Productos</h2>
-    <div class="row mb-3">
+    <h2 class="mb-5" style="text-align: center">Cursos Disponibles </h2>
+    <div class="row mb-3" *ngFor="let producto of productos">
         <div class="col-md-6">
-            <img src="assets/images/desarrollo web.jpg" alt="">
+            <img [src]="producto.imagen" alt="">
         </div>
         <div class="col-md-6">
-            <h3>Desarrollo Web</h3>
-            <h4>Aprende Desarrollo Web con este curso 100% práctico, paso a paso y sin conocimientos previos</h4>
-            <p>En este curso aprenderás lo básico de cada tecnología y 
-               después integraremos todo junto para hacer diseños increíbles, 
-               es decir: crearemos una base sólida y luego veremos como utilizarla 
-               sin duda la que considero la mejor forma de aprender.
-            </p>
-
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <img src="assets/images/ordenador.jpg" alt="">
-        </div>
-        <div class="col-md-6">
-            <h3>Lenguajes de programación</h3>
-            <h4>Aprende las Bases de la Programación en 9 lenguajes a la vez: Java, Python, Go, C++, PHP, Ruby, C#, JavaScript y C</h4>
-            <p>En este curso de Fundamentos de Programación aprenderás de forma básica
-                y muy completa las nociones más elementales sobre el desarrollo de software. 
-                Este curso dará un recorrido completo por todos los conceptos más básicos 
-                para aprender a programar, lo cual te permitirá entender cualquier lenguaje 
-                gracias a la visión global que adquirirás.
-            </p>
-
-        </div>
-    </div>
-    <div class="row mb-3">
-        <div class="col-md-6">
-            <img src="assets/images/aplicaciones moviles.jpg" alt="">
-        </div>
-        <div class="col-md-6">
-            <h3>Aplicaciones móviles</h3>
-            <h4>Aprender a programar aplicaciones y juegos para Android de forma profesional y desde cero.</h4>
-            <p>Aprende a crear aplicaciones para android desde cero y de forma sencilla con Android Studio y las herramientas más profesionales del momento. En este curso aprenderás:</p>
-            <ul>
-                <li>Java necesario para el desarrollo en Android</li>
-                <li>Desarrollo de Aplicaciones nativas para Android</li> 
-                <li>Desarrollo de Juegos para Android</li> 
-                <li>y mucho más</li>                
+            <h3>{{producto.titulo}}</h3>
+            <h4>{{producto.subtitulo}}</h4>
+            <p>{{producto.texto}}</p>
+            <ul *ngIf="producto.lista">
+                <li *ngFor="let item of producto.lista"> {{item}} </li>
             </ul>
         </div>
     </div>
+    <hr>
+    <!-- 
     <div class="row mb-3">
         <div class="col-md-6">
             <img src="assets/images/videojuegos.jpg" alt="">
@@ -65,6 +33,7 @@
 
         </div>
     </div>
+    <hr>
     <div class="row mb-3">
         <div class="col-md-6">
             <img src="assets/images/finanzas.jpg" alt="">
@@ -81,5 +50,5 @@
             </p>
 
         </div>
-    </div>
+    </div> -->
 </div>

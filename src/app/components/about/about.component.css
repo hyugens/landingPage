@@ -1,0 +1,13 @@
+.about{
+    min-height: 150px;
+    background: #1F1D1D;
+}
+.container {
+    color: #757575;
+    height: 100%;
+}
+h5{
+    color: #CECECE;
+    display: inline-block;
+    padding-left: 3px;
+}

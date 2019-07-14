@@ -21,10 +21,12 @@ img{
     height: 450px;
     object-fit: cover;
     width: auto;
+    animation: moverDerecha 1s ease-in;
 }
 .textos{
     width: 50%;
     color: white;
+    animation: moverIzquierda 1s ease-in;
 }
 .textos h1{
     font-size: 80px;
@@ -46,6 +48,7 @@ img{
     border-radius: 3px;
     text-align: center;
     padding: 10px 0;
+    font-weight: 600;
 }
 
 .wave{
@@ -57,7 +60,7 @@ img{
     
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1250px){
     img{
         height: 340px;
     }
@@ -68,7 +71,7 @@ img{
         height: 250px;
     }
     .textos h1{
-        font-size: 70px;
+        font-size: 55px;
     }
     .textos h2{
         font-size: 20px;
@@ -82,10 +85,10 @@ img{
         margin-left: 10%;
     }
     .textos h1{
-        font-size: 50px;
+        font-size: 45px;
     }
     .textos h2{
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 @media screen and (max-width:550px){
@@ -102,10 +105,10 @@ img{
         margin-left: 4%;
     }
     .textos h1{
-        font-size: 60px;
+        font-size: 55px;
     }
     .textos h2{
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 @media screen and (max-width:340px){
@@ -129,5 +132,28 @@ img{
     }
     .textos h2{
         font-size: 15px;
+    }
+}
+
+
+@keyframes moverIzquierda{
+    0%{
+        opacity:0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity:0;
+        transform: translateX(200px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0);
     }
 }
