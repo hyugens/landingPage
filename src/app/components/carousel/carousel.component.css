@@ -1,0 +1,133 @@
+.container{
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+header {
+    background: #ffd89b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    height: auto;
+    padding: 48px;
+    width: 100%;
+}
+img{
+    display: block;
+    height: 450px;
+    object-fit: cover;
+    width: auto;
+}
+.textos{
+    width: 50%;
+    color: white;
+}
+.textos h1{
+    font-size: 80px;
+}
+.textos h2{
+    font-size: 30px;
+}
+
+.textos a{
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 20%;
+    border: 1px solid #fff;
+    width: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.wave{
+    height: 100px;
+    width: 100%;
+    background: #ffd89b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+@media screen and (max-width:1000px){
+    img{
+        height: 340px;
+    }
+
+}
+@media screen and (max-width:875px){
+    img{
+        height: 250px;
+    }
+    .textos h1{
+        font-size: 70px;
+    }
+    .textos h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:700px){
+    img{
+        height: 185PX;
+    }
+    .textos a{
+        margin-left: 10%;
+    }
+    .textos h1{
+        font-size: 50px;
+    }
+    .textos h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:550px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos a{
+        margin-left: 4%;
+    }
+    .textos h1{
+        font-size: 60px;
+    }
+    .textos h2{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:340px){
+    .container{
+        width: 100%;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    img{
+        height: 160px;
+    }
+    .textos{
+        width: 100%;
+        text-align: center;
+    }
+    .textos h1{
+        font-size: 35px;
+    }
+    .textos a{
+        width: 120px;
+    }
+    .textos h2{
+        font-size: 15px;
+    }
+}

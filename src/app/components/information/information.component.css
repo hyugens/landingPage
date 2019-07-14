@@ -1,0 +1,35 @@
+img{
+    height: 240px;
+}
+h2{
+    font-size: 50px;
+}
+h2, h3{
+    color: #255b7c;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #F4F5F7;
+    line-height: 6;
+    text-align: center
+}
+i{
+    font-size: 40px;
+    display:inline-block;
+    vertical-align:middle;
+    line-height:normal;
+    color: #A4B4BC;
+}
+.columna{
+    min-height: 210px;
+}
+
+@media screen and (max-width:700px){
+    h2{
+        text-align: center;
+    }
+}
